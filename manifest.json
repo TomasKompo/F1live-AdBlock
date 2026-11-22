@@ -1,0 +1,20 @@
+
+{
+  "manifest_version": 3,
+  "name": "Flive Popup Blocker",
+  "version": "1.0",
+  "description": "Blokuje automaticky otevíraná reklamní okna na Flive.",
+  "host_permissions": [
+    "https://flive.cc.cd/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://flive.cc.cd/*"
+      ],
+      "js": ["blocker.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    }
+  ]
+}
